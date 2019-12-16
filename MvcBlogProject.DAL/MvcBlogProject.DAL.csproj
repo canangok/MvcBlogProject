@@ -52,6 +52,11 @@
   <ItemGroup>
     <Compile Include="Database\ProjectContext.cs" />
     <Compile Include="Mappings\ContactPageMappings.cs" />
+    <Compile Include="Migrations\201912161423361_first.cs" />
+    <Compile Include="Migrations\201912161423361_first.Designer.cs">
+      <DependentUpon>201912161423361_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +68,11 @@
       <Project>{E1DCE392-AF1D-4E75-9499-FD65C93F443F}</Project>
       <Name>MvcBlogProject.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912161423361_first.resx">
+      <DependentUpon>201912161423361_first.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

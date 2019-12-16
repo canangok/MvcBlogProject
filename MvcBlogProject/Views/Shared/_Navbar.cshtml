@@ -1,0 +1,43 @@
+﻿<header id="header">
+    <div class="header-ic">
+
+        <div class="logo">
+            <h2>
+                <a itemprop="url" href="https://www.canangok.com/" title="Kişisel Blog">
+                   { CANAN GÖK }
+                </a>
+            </h2>
+        </div>
+        <div class="search">
+            <form method="get" id="searchform" class="searchform" action="#">
+                <button id="searchsubmit" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" id="searchfield" name="s" 
+                       onblur="if(this.value=='')this.value='Aradığınız kelime';" 
+                       onfocus="if(this.value=='Aradığınız kelime')this.value='';" 
+                       value="Aradığınız kelime">
+            </form>
+        </div>
+
+    </div>
+</header>
+<div style="background-color:#222;">
+    <nav id="nav" >
+        <div class="menu-ic">
+            <div class="menu-menu-1-container">
+                <ul id="menu-menu-1" class="menu">
+                    <li id="anasayfa" class="menu-item">
+                        <a href="@Url.Action("Index","Home")" aria-current="page">Ana Sayfa</a>
+                    </li>
+                    <li id="hakkimda" class="menu-item">
+                        <a href="@Url.Action("About","Home")">Hakkımda</a>
+                    </li>
+                    <li id="iletisim" class="menu-item">
+                        <a href="@Url.Action("Contact","Home")">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

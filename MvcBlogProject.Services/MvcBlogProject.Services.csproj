@@ -4,16 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1408F7A9-A0A4-419D-A2B6-CEE04F08BF82}</ProjectGuid>
+    <ProjectGuid>{C9EEED21-A3F9-49BA-B79E-3CD9915CBC2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvcBlogProject.DAL</RootNamespace>
-    <AssemblyName>MvcBlogProject.DAL</AssemblyName>
+    <RootNamespace>MvcBlogProject.Services</RootNamespace>
+    <AssemblyName>MvcBlogProject.Services</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,14 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,36 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\ProjectContext.cs" />
-    <Compile Include="Mappings\ContactPageMappings.cs" />
-    <Compile Include="Migrations\201912161423361_first.cs" />
-    <Compile Include="Migrations\201912161423361_first.Designer.cs">
-      <DependentUpon>201912161423361_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912161445085_ChangeContactPage.cs" />
-    <Compile Include="Migrations\201912161445085_ChangeContactPage.Designer.cs">
-      <DependentUpon>201912161445085_ChangeContactPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="AboutServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\MvcBlogProject.DAL\MvcBlogProject.DAL.csproj">
+      <Project>{1408F7A9-A0A4-419D-A2B6-CEE04F08BF82}</Project>
+      <Name>MvcBlogProject.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvcBlogProject.Entities\MvcBlogProject.Entities.csproj">
       <Project>{E1DCE392-AF1D-4E75-9499-FD65C93F443F}</Project>
       <Name>MvcBlogProject.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912161423361_first.resx">
-      <DependentUpon>201912161423361_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912161445085_ChangeContactPage.resx">
-      <DependentUpon>201912161445085_ChangeContactPage.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

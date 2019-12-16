@@ -9,5 +9,6 @@
         public string LinkedinProfile { get; set; }
         public string GithubProfile { get; set; }
         public string TitleName { get; set; }
+        public string ContactPageContent { get; set; }
     }
 }

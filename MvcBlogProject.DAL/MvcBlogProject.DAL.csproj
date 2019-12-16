@@ -63,6 +63,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AboutManagement.cs" />
+    <Compile Include="Repository\ContactManagement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

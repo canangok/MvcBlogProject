@@ -1,4 +1,5 @@
 ﻿using MvcBlogProject.DAL.Database;
+using MvcBlogProject.DAL.Repository;
 using MvcBlogProject.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,18 @@ namespace MvcBlogProject.Services
 {
     public class AboutServices
     {
-        private ProjectContext Database;
+        private AboutManagement _aboutManagement;
+
         public AboutServices()
         {
-            Database = new ProjectContext();
+            _aboutManagement = new AboutManagement();
         }
 
-       
+        public AboutPage GetAbout()
+        {
+            var aboutPage = _aboutManagement.GetAboutPage();
+            return aboutPage;
+        }
     }
+
 }

@@ -44,7 +44,7 @@ namespace MvcBlogProject.Controllers
                 // return PartialView("_NotFound");
                 return PartialView("_NotFound");
             }
-            return View();
+            return View(contact);
         }
     }
 }

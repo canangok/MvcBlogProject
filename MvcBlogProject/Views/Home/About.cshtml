@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Burası Hakkımda";
+    ViewBag.Title = "Hakkımda";
 }
 
 <!--MAIN-->
@@ -7,6 +7,7 @@
     <h2>HAKKIMDA</h2>
     <div class="col-12" style="background-color:coral;height:400px;">
         <p>Title : @Model.TitleName</p>
+        @Html.Raw(Model.AboutDescription)
         <p></p>
     </div>
 

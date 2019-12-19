@@ -100,7 +100,6 @@
     <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
     <Content Include="Content\lib\bootstrap\js\bootstrap.js" />
     <Content Include="Content\lib\jQuery\jquery-3.3.1.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\images\gorsel1.jpg" />
     <Content Include="Content\images\gorsel2.jpg" />
@@ -118,9 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />

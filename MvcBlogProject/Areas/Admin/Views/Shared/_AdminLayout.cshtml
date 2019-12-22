@@ -9,29 +9,7 @@
     @RenderSection("customAdminstyles",false)
 </head>
 <body class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <a href="@Url.Action("Index","Home",new { area=""})" target="_blank">
-                Normal Anasayfa
-            </a>
-        </div>
-        <div class="col">
-            <a href="@Url.Action("Index","Home",new { area = "Admin"})">
-                Admin Anasayfa
-            </a>
-        </div>
-        <div class="col">
-            <a href="@Url.Action("Index","About",new { area="Admin"})">
-                Admin About
-            </a>
-        </div>
-        <div class="col">
-            <a href="@Url.Action("Index","Contact",new { area="Admin"})">
-                Admin Contact
-            </a>
-        </div>
-
-    </div>
+      @Html.Partial("_AdminNavbar")
     <div class="container">
         @RenderBody()
     </div>

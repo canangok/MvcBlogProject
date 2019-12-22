@@ -12,9 +12,9 @@ namespace MvcBlogProject.Entities
     public class AboutPage
     {
         public int Id { get; set; }
-        [Display(Name ="Başlık")]
+      
         public string TitleName { get; set; }
-        [Display(Name = "İçerik")]
+        
         public string AboutDescription { get; set; }
     }
 }

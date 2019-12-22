@@ -1,4 +1,5 @@
 ﻿using MvcBlogProject.Entities;
+using MvcBlogProject.Models;
 using MvcBlogProject.Services;
 using System;
 using System.Collections.Generic;
@@ -20,20 +21,31 @@ namespace MvcBlogProject.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var aboutModel = _aboutServices.GetAbout();
-            return View(aboutModel);
+            var aboutViewModel = new AboutViewModel
+            {
+                Title = aboutModel.TitleName,
+                Description = aboutModel.AboutDescription
+            };
+            return View(aboutViewModel);
         }
         [HttpGet]
         public ActionResult Edit()
         {
             var aboutModel = _aboutServices.GetAbout();
-            return View(aboutModel);
+
+            var aboutViewModel = new AboutViewModel
+            {
+                Title = aboutModel.TitleName,
+                Description = aboutModel.AboutDescription
+            };
+            return View(aboutViewModel);
         }
 
         [HttpPost]
-        public ActionResult Edit(AboutPage aboutPage)
+        public ActionResult Edit(AboutViewModel aboutViewModel)
         {
-           
-            return View();
+
+            return RedirectToAction("Edit");
         }
 
 

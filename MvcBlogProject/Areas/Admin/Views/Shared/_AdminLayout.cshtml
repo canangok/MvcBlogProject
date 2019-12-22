@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>@ViewBag.AdminTitle</title>
+    <link href="~/Content/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    @RenderSection("customAdminstyles",false)
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <a href="@Url.Action("Index","Home",new { area=""})" target="_blank">
+                Normal Anasayfa
+            </a>
+        </div>
+        <div class="col">
+            <a href="@Url.Action("Index","Home",new { area = "Admin"})">
+                Admin Anasayfa
+            </a>
+        </div>
+        <div class="col">
+            <a href="@Url.Action("Index","About",new { area="Admin"})">
+                Admin About
+            </a>
+        </div>
+        <div class="col">
+            <a href="@Url.Action("Index","Contact",new { area="Admin"})">
+                Admin Contact
+            </a>
+        </div>
+
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/Content/lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="~/Content/lib/bootstrap/js/bootstrap.js"></script>
+    @RenderSection("customAdminScript", false)
+</body>
+</html>

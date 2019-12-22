@@ -1,2 +1,2 @@
 # MvcBlogProject
-.Net Mvc Blog Project - used Entitiy Framework / codeFirst
+.Net Mvc Blog Project - Entitiy Framework / codeFirst

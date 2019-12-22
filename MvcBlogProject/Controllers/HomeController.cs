@@ -1,4 +1,6 @@
-﻿using MvcBlogProject.Services;
+﻿using MvcBlogProject.Entities;
+using MvcBlogProject.Extensions;
+using MvcBlogProject.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,12 +29,14 @@ namespace MvcBlogProject.Controllers
         [HttpGet]
         public ActionResult About()
         {
-            var about = _aboutServices.GetAbout();
+            AboutPage about = _aboutServices.GetAbout();
+            var model = AboutExtensions.GetAboutViewModel(about);
+
             if(about == null)
             {
                 return PartialView("_NotFound");
             }
-            return View(about);
+            return View(model);
         }
 
         [HttpGet]

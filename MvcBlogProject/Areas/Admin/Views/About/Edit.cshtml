@@ -1,4 +1,4 @@
-﻿@model AboutViewModel
+﻿@model MvcBlogProject.Models.AboutViewModel
 @{
     ViewBag.Title = "Hakkımda Düzenleme Sayfası";
 }
@@ -11,10 +11,7 @@
                 @Html.DisplayFor(i => i.Title)
             </div>
             <div class="col">
-           
-               
-
-                @Html.TextBox(model => model.Title, new { htmlAttributes = new { @class = "form-control", placeholder = "Başlık giriniz", required = "required" } })
+                @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "Başlık giriniz." })
             </div>
         </div>
     </div>
@@ -22,11 +19,11 @@
     <div class="form-group">
         <div class="row">
             <div class="col-2">
-               @Html.LabelFor(i=> i.AboutDescription)
+               @Html.LabelFor(i=> i.Description)
             </div>
             <div class="col">
                 <!-- <input type="text" class="form-control" value="@Html.Raw(@Model.Description)" />-->
-                @Html.EditorFor(model => model.AboutDescription, new { htmlAttributes = new { @class = "form-control", placeholder = "İçerik giriniz" } })
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", placeholder = "İçerik giriniz" } })
             </div>
         </div>
     </div>

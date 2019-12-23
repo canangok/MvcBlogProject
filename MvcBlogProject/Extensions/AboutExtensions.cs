@@ -9,7 +9,7 @@ namespace MvcBlogProject.Extensions
 {
     public static class AboutExtensions
     {
-        public static AboutViewModel GetAboutViewModel(AboutPage aboutPage)
+        public static AboutViewModel GetAboutViewModel(this AboutPage aboutPage)
         {
             AboutViewModel aboutViewModel = new AboutViewModel
             {

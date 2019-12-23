@@ -1,10 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Burası İletişim Sayfası";
+    ViewBag.Title = "Contact";
 }
 <main id="main" class="site-main">
     <h2>İLETİŞİM</h2>
     <div class="" style="background-color:coral;height:400px;">
-        @Html.Raw(Model.FullName)
+        @Html.Raw(@Model.FullName)
         @Html.Raw(Model.ContactPageContent)
     </div>
 </main>

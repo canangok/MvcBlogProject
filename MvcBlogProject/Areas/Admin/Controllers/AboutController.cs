@@ -1,4 +1,5 @@
 ﻿using MvcBlogProject.Entities;
+using MvcBlogProject.Extensions;
 using MvcBlogProject.Models;
 using MvcBlogProject.Services;
 using System;
@@ -21,11 +22,12 @@ namespace MvcBlogProject.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var aboutModel = _aboutServices.GetAbout();
-            var aboutViewModel = new AboutViewModel
-            {
-                Title = aboutModel.TitleName,
-                Description = aboutModel.AboutDescription
-            };
+            //var aboutViewModel = new AboutViewModel
+            //{
+            //    Title = aboutModel.TitleName,
+            //    Description = aboutModel.AboutDescription
+            //};
+            var aboutViewModel = aboutModel.GetAboutViewModel();
             return View(aboutViewModel);
         }
         [HttpGet]
@@ -33,11 +35,13 @@ namespace MvcBlogProject.Areas.Admin.Controllers
         {
             var aboutModel = _aboutServices.GetAbout();
 
-            var aboutViewModel = new AboutViewModel
-            {
-                Title = aboutModel.TitleName,
-                Description = aboutModel.AboutDescription
-            };
+            //var aboutViewModel = new AboutViewModel
+            //{
+            //    Title = aboutModel.TitleName,
+            //    Description = aboutModel.AboutDescription
+            //};
+            //return View(aboutViewModel);
+            var aboutViewModel = aboutModel.GetAboutViewModel();
             return View(aboutViewModel);
         }
 

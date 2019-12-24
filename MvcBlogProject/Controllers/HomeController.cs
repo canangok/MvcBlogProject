@@ -30,12 +30,13 @@ namespace MvcBlogProject.Controllers
         public ActionResult About()
         {
             AboutPage about = _aboutServices.GetAbout();
-            var model = AboutExtensions.GetAboutViewModel(about);
+            var model = about.GetAboutViewModel();
+            //var model = AboutExtensions.GetAboutViewModel(about);
 
-            if(about == null)
-            {
-                return PartialView("_NotFound");
-            }
+            //if(about == null)
+            //{
+            //    return PartialView("_NotFound");
+            //}
             return View(model);
         }
 

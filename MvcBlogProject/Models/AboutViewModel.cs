@@ -8,7 +8,8 @@ namespace MvcBlogProject.Models
 {
     public class AboutViewModel
     {
-        [Display(Name="Başlık")]
+        [Display(Name = "Başlık")]
+        [Required(ErrorMessage ="Hakkımda bilgisini göstermek için bu alan zorunludur")]
         public string Title { get; set; }
 
         [Display(Name = "İçerik")]

@@ -48,7 +48,11 @@ namespace MvcBlogProject.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Edit(AboutViewModel aboutViewModel)
         {
-
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "error Message");
+                return View();
+            }
             return RedirectToAction("Edit");
         }
 

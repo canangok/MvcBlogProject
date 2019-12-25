@@ -13,10 +13,11 @@
 
 @using (Html.BeginForm("Edit", "About", FormMethod.Post))
 {
+    @Html.HiddenFor(i=>i.Id)
     <div class="form-group">
         <div class="row">
             <!--Validationlarla alakalı uyarıları bana göster-->
-            @Html.ValidationSummary()
+            @Html.ValidationSummary("",new {@class = "text-danger"})
         </div>
     </div>
 
@@ -40,6 +41,7 @@
             </div>
             <div class="col">
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", placeholder = "İçerik giriniz" } })
+                @Html.ValidationMessageFor(i => i.Description, "", new { @class = "text-danger" })
             </div>
         </div>
     </div>

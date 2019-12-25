@@ -23,6 +23,11 @@ namespace MvcBlogProject.Services
             var aboutPage = _aboutManagement.GetAboutPage();
             return aboutPage;
         }
+
+        public void UpdateAbout(AboutPage aboutPage)
+        {
+            var result = _aboutManagement.EditAboutPage(aboutPage);
+        }
     }
 
 }

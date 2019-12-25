@@ -50,10 +50,13 @@ namespace MvcBlogProject.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("", "error Message");
+                ModelState.AddModelError("", "İçeriği düzenleyebilmek için gerekli tüm alanları doldurmanız gerekmektedir");
                 return View();
             }
-            return RedirectToAction("Edit");
+            var aboutPage = aboutViewModel.GetAboutPage();
+            _aboutServices.UpdateAbout(aboutPage);
+
+            return RedirectToAction("Index");
         }
 
 
